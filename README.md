@@ -23,7 +23,7 @@ a chatroom framework with nodejs + socket.io + redis +php chatroom . it's fast,s
 
 2. 连接socket.io服务器： var socket = io.connect('http://127.0.0.1:8081');
 
-3. 初始化传递数据 on_load
+3. 初始化传递数据 on_load 将房间号r_id,user_name,nick_name,level 等参数传递给chat服务器的on_load方法
 
 4. 接受消息就用 socket.on('function', function (msg){});
 
