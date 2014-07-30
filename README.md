@@ -20,3 +20,11 @@ a chatroom framework with nodejs + socket.io + redis +php chatroom . it's fast,s
 在demo/index.php 里有详细的使用，可以去看，这里简单说下。
 
 1. html头部加入socket.io的js：http://127.0.0.1:8080/socket.io/socket.io.js
+
+2. 连接socket.io服务器： var socket = io.connect('http://127.0.0.1:8081');
+
+3. 初始化传递数据 on_load
+
+4. 接受消息就用 socket.on('function', function (msg){});
+
+5. socket.emit('function', info); 
