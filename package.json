@@ -1,6 +1,6 @@
 {
   "name": "nodejs-socket-redis-php-chatroom",
-  "description": "Pool redis connections for Node.JS",
+  "description": "chatroom with nodejs",
   "version": "0.0.1",
   "author": {
     "name": "tony yang",
