@@ -27,4 +27,4 @@ a chatroom framework with nodejs + socket.io + redis +php chatroom . it's fast,s
 
 4. 接受消息就用 socket.on('function', function (msg){});
 
-5. socket.emit('function', info); 
+5. 发送消息就用socket.emit('function', info); 
