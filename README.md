@@ -3,6 +3,11 @@ nodejs-socket-redis-php-chatroom
 
 a chatroom framework with nodejs + socket.io + redis +php chatroom . it's fast,simple, stable and multipurpose !
 
+功能
+================================
+1. 支持多房间，多人聊天，支持踢出房间，屏蔽15分钟，发送全局系统消息
+2. 聊天室服务与php业务完全分类，互不影响，可以在php代码中向聊天室推送各种消息，以达到实时响应的作用
+
 启动聊天服务器
 ================================
 
@@ -28,3 +33,15 @@ a chatroom framework with nodejs + socket.io + redis +php chatroom . it's fast,s
 4. 接受消息就用 socket.on('function', function (msg){});
 
 5. 发送消息就用socket.emit('function', info); 
+
+
+原理以及注意
+================================
+1. 采用的redis 的pub/sub模式，每一个链接都会产生2个redis长连接,所以需要将redis的链接数搞大点。
+2. config.js 里有各种可以自行配置，可以配置redis的各个配置，以及整个聊天室的名字等等。
+3. 可以自行使用forever 或者 supervisor 来达到守护进程及其修改代码重启的作用。
+4. index.js里io.set('authorization') 被注释掉，可以自行根据需要读取cook或者refer来安全校验。
+
+使用
+================================
+使用请带上来源，开源的版权东西需要一起维护，谢谢。
