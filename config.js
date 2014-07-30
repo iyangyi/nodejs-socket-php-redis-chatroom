@@ -9,7 +9,7 @@ exports.config = {
                 port: 8081
         },
         app: {
-                name: 'test-chat',
+                name: 'chat',
                 kick_out_time : 900,
                 forbidden_talk_time: 180,
                 return_list_num: 100,
